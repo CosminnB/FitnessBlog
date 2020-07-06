@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<cooking_book>
+  <recipe>
+    <name>QUICK AVOCADO CHICKEN WRAP</name>
+    <calories>1200 kcal</calories>
+    <prep_time>35 min</prep_time>
+  </recipe>
+  <recipe>
+    <name>RATATOUILLE WITH CREAMY POLENTA</name>
+    <calories>1500 kcal</calories>
+    <prep_time>60 min</prep_time>
+  </recipe>
+  <recipe>
+    <name>LOW-CALORIE ZOODLES WITH CHICKEN AND TOMATOES</name>
+    <calories>900 kcal</calories>
+    <prep_time>55 min</prep_time>
+  </recipe>
+  <recipe>
+    <name>SHRIMP AND BROCCOLI STIR-FRY</name>
+    <calories>1350 kcal</calories>
+    <prep_time>70 min</prep_time>
+  </recipe>
+  <recipe>
+    <name>VEGAN RED LENTIL CURRY</name>
+    <calories>800 kcal</calories>
+    <prep_time>40 min</prep_time>
+  </recipe>
+</cooking_book>

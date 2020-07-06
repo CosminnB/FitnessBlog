@@ -1,0 +1,395 @@
+﻿$orange: #EE922E;
+$background-black: #272727;
+$grey: #737373;
+$container-grey:#757575;
+@mixin navbar-title{
+    color: $orange;
+    font-family:CintraSolidW01-Regular;
+    padding-right:60px;
+}
+@mixin  thinText{
+    font-weight:100;
+}
+
+body{
+    font-family:Lato;
+    height:100%;
+    background-color:$background-black;
+    color:white;
+}
+html {
+  height: 100%;
+
+}
+/*Home*/
+.bg { 
+  /* The image used */
+  background-image: url("/photos/rope-climbing.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media only screen and (min-width:1200px){
+    .bg { 
+  /* The image used */
+  background-image: url("/photos/man-jumping.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+}
+
+#motto{
+    padding-top:25px;
+    font-family:Lato;
+    font-weight:900;
+}
+#start{
+    font-size:26px;
+    padding:200px 20px 20px 20px;
+}
+
+.aboutt{
+    background-color:$background-black;
+    color:white;
+    padding:40px;
+    text-align:center;
+
+}
+.aboutt i{
+    font-size:40px;
+}
+/*End of Home*/
+
+/*De facut cu media query*/
+select.form-control option{
+    font-size:14px;
+    
+}
+@media only screen and (max-width:550px){
+    select.form-control option{
+    font-size:9px;
+    
+}
+}
+#navbar-text{
+    @include navbar-title;
+}
+#motto{
+    color:$orange;
+    text-decoration:underline;
+    @include thinText;
+}
+#start{
+    color:white;
+}
+.aboutt{
+    background-color:$background-black;
+    color:white;
+    padding:40px;
+    h2{
+        @include thinText;
+        color:$orange;
+    }
+}
+/*Articles*/
+#myBtnContainer{
+li{
+    padding:4px;
+}
+.btn {
+  border: none;
+  outline: none;
+  background-color: $container-grey;
+  cursor: pointer;
+  color:white;
+}
+
+.btn:hover {
+  background-color: $orange;
+}
+
+.btn.active {
+  background-color: $orange;
+  color: white;
+}
+}
+.recent{
+    margin-top:20px;
+    h5{
+        @include thinText;
+    }
+}
+.time{
+    margin-top:20px;
+    li{
+        overflow:hidden;
+    }
+    p{
+        float:left;
+    }
+    span{
+        float:right;
+    }
+}
+.secondary{
+    width:300px;
+    margin:20px;
+    hr{
+        border-bottom:2px solid $orange;
+    }
+}
+.articles{
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+
+.card{
+    background-color:$background-black;
+    color:white;
+    justify-content:center;
+    border:none;
+}
+  .filterDiv {
+  width: 700px;
+  height:100%;
+  margin: 2px;
+  display: none;
+  margin-top:40px;
+}
+
+.show {
+  display: block;
+}
+
+.card-img-top {
+    max-height: 100%;
+}
+}
+.author{
+    float:left;
+    color:$container-grey;
+}
+
+.tag{
+    float:right;
+    color:$container-grey;
+}
+
+}
+hr{
+    border-bottom:1.5px solid $orange;
+}
+a{
+    text-decoration:none;
+    transition:color 0.2s ease-in;
+    color:white;
+}
+a:hover{
+    text-decoration:none;
+    color:$orange;
+}
+/*End Articles*/
+/*Stories*/
+.stories{
+    .bar{
+                text{
+            fill:white;
+            :hover,:focus{
+                fill:white;
+            }
+        }
+        fill:$orange;
+        height:30px;
+        transition:fill .3s ease;
+        :hover,:focus{
+            fill:white;
+        }
+    }
+
+    .container{
+        margin-top:20px;
+        overflow:hidden;
+        
+    }
+    .card{
+        background-color:$background-black;
+        margin-top:20px;
+        margin-left:40px;
+        border:dashed 1px $orange ;
+        border-radius:58px;
+        box-shadow:0 0 20px $orange;
+        justify-content:center;
+        width:80%;
+        font-size:16px;
+    }
+    .card-body{
+        padding:30px;
+    }
+    .circular{
+        position:relative;
+        width:150px;
+        height:150px;
+        overflow:hidden;
+        border-radius:50%;
+        margin:auto;
+        margin-top:15px;
+        img{
+
+            width:100%;
+            height:100%;
+        }
+    }
+    .find{
+        i{
+            font-size:30px;
+            padding:5px;
+            transition:color 0.2s ease-in;
+        }
+        i:hover{
+            color:$grey;
+        }
+    }
+
+}
+/*End Stories*/
+/*Tools*/
+.tools{
+    .container{
+        position:relative;
+        text-align:center;
+        color:$orange;
+    }
+    .center{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+    }
+    img{
+        opacity:0.65;
+    }
+}
+/*End Tools*/
+/*Shop*/
+.shop{
+.filterDiv {
+  background-color: $container-grey;
+  color: white;
+  width: 350px;
+  text-align: center;
+  margin: 2px;
+  display:none;
+}
+
+.show {
+  display: block;
+}
+
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+  position:relative;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: $background-black;
+  cursor: pointer;
+  color:white;
+}
+
+.btn:hover {
+  background-color: $orange;
+}
+
+.btn.active {
+  background-color: $orange;
+  color: white;
+}
+@media only screen and (min-width:1200px){
+.filterDiv{
+    width:400px;
+    position:relative;
+}
+.filterDiv:hover{
+   opacity:0.8;
+}
+.sizes{
+    position:absolute;
+    top:200px;
+    left:20px;
+    display:none;
+}
+}
+
+}
+/*End Shop*/
+/*Contact*/
+.contact{
+        @media only screen and (min-width:1000px){
+        width:70%;
+        align-content:center;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    color:white;
+    @include thinText;
+    padding:20px;
+    margin:20px;
+    @media only screen and (min-width:1000px){
+        width:70%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+/*End Contact*/
+/*Article Page*/
+.article{
+    padding:20px 12%;
+    line-height:30px;
+    
+
+    img{
+        max-width:100%;
+        margin:auto;
+        padding:10px;
+    }
+    .category{
+        width:100px;
+        padding:5px;
+        background-color:$orange;
+    }
+    .subtitle{
+        @include thinText;
+    }
+    h3{
+        padding-top:1rem;
+    }
+    .info{
+        border:2px solid $orange;
+        padding:5px;
+        i{
+            color:$orange;
+            font-size:20px;
+            padding:5px;
+        }
+    }
+    hr{
+        border:2px solid $orange;
+    }
+}
+/*End Article Page*/

@@ -1,0 +1,29 @@
+        <div class="category">Food & Diet</div>
+
+        <h1 class="title">HEALTHY LUNCHES: 5 RECIPES FOR THE WHOLE FAMILY</h1>
+
+        <div class="subtitle">by Tina Ornezeder | 07/04/2020</div>
+
+        <img src="/photos/lunch.jpg" alt="lunch"/>
+
+        <p>You’re finally ready to start eating better? The first thing that probably comes to mind is salad. This is good for your next lunch, but it might get pretty boring after three days in a row. </p>
+
+	<h2>TRY THESE FIVE TASTY RECIPES FOR A HEALTHY LUNCH:</h2>
+        <h3>1. QUICK AVOCADO CHICKEN WRAP</h3>
+        <p>Between work calls, child care, and daily chores, it’s often difficult to find the time to cook. Prepare the Avocado Chicken Wrap the night before so it’s ready to eat and enjoy as soon as you’re ready for a break.</p>
+
+        <h3>2. RATATOUILLE WITH CREAMY POLENTA</h3>
+        <p>Onion, bell pepper, zucchini, and eggplant are the main ingredients for this vegetarian dish. Add the comfort of creamy polenta to round out this ratatouille.  </p>
+	<div class="info"><i class="fas fa-info-circle"></i> The dish “ratatouille” originated in Nice. The French recipe was printed and distributed for the first time around 1930, after which it started gaining popularity beyond the region of southern France.</div>
+        
+	<h3>3. LOW-CALORIE ZOODLES WITH CHICKEN AND TOMATOES</h3>
+        <p>You don’t need any carbs to enjoy your favorite Italian dish! Just replace pasta with zoodles (zucchini noodles) and you’ve got a delicious low-carb version. Are you a vegetarian? Skip the chicken and add tofu or cashews instead.  </p>
+
+        <h3>4. SHRIMP & BROCCOLI STIR-FRY</h3>
+        <p>
+            No need to order takeout to enjoy your favorite Chinese food flavors! This meal takes only 10 minutes to prepare, and tons of healthy, tasty ingredients.
+        </p>
+
+        <h3>5. VEGAN RED LENTIL CURRY</h3>
+        <p>Lentils are a powerhouse for protein. This low-cal curry is full of flavor and nutrients and really warms you up on cold, rainy days. It’s perfect for a quick, comforting  lunch break at home to power you through the rest of your day. </p>
+	<div class="info"><i class="fas fa-info-circle"></i>Lentils are very high in protein. 100 g of lentils have 27 g of this important macronutrient. Lentils are also loaded with essential minerals and fiber.</div>

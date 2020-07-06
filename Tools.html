@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Spark Fitness</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Brand -->
+        <a class="navbar-brand" id="navbar-text">Fitness Tools</a>
+
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="Home.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbar-drop" data-toggle="dropdown" href="#">Blog</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="Articles.html">Articles</a>
+                        <a class="dropdown-item" href="Stories.html">Stories</a>
+                        <a class="dropdown-item" href="Tools.html">FitTools</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Shop.html">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="tools">
+        <div class="container">
+            <img src="/photos/bmi.jpg" style="width:100%" alt="bmi"/>
+            <h2 class="center">BMI Calculator</h2>
+        </div>
+    </div>
+
+    <div style="background-color:grey; margin: 20px; padding: 20px;">
+
+        <h5 class="h5">BMI Calculator</h5>
+        <p>
+            BMI, Body Mass Index, is used to screen for weight categories that may have a higher risk for health problems.
+            It is an indicator of the nutritional status ranging from underweight to obesity, not a measure of body fat percentage
+            or the health of an individual.
+        </p>
+        <div class="form-group " style="color:black;">
+            <label for="Age">Age:</label>
+            <input type="number" min="18" max="120" title="Age should be greater than or equal to 18" oninvalid="alert('Age should be greater than or equal to 18');" required class="form-control" placeholder="Enter age..." id="Age" style="width:200px" />
+        </div>
+
+        <div class="form-group " style="color:black;">
+            <label for="Height">Height:</label>
+            <input type="number" min="1" max="300" class="form-control text-right" placeholder="cm" id="Height" style="width:200px" required />
+        </div>
+
+        <div class="form-group " style="color:black;">
+            <label for="Weight">Weight:</label>
+            <input type="number" min="1" max="300" class="form-control text-right" placeholder="kg" id="Weight" style="width:200px" required />
+        </div>
+
+        <button id="calculate" class="btn bg-light" onclick="calcBMI()">Calculate</button>
+
+        <div class="form-group" style="color:black">
+            <input type="text" class="form-control" id="output" placeholder="Your BMI..." readonly/>
+        </div>
+        <p>BMI Table</p>
+        <ul>
+            <li>Below 18.5 Underweight</li>
+            <li>18.5–24.9 > Normal weight</li>
+            <li>25.0–29.9 > Overweight</li>
+            <li>30.0–34.9 > Class I obesity</li>
+            <li>35.0–39.9 > Class II obesity</li>
+            <li>40 > Class III obesity</li>
+        </ul>
+    </div>
+
+    <div class="tools">
+        <div class="container">
+            <img src="/photos/man-holding-kettlebells.jpg" style="width:100%" alt="man-with-kettlebells"/>
+            <h2 class="center">Calorie Calculator</h2>
+        </div>
+    </div>
+
+    <div style="background-color:grey; margin: 20px; padding: 20px;">
+        <h5 class="h5">Calorie Calculator</h5>
+        <div class="form-group " style="color:black;">
+            <label for="Age1">Age:</label>
+            <input type="number" min="18" max="120" title="Age should be greater than or equal to 18" oninvalid="alert('Age should be greater than or equal to 18');" required class="form-control" placeholder="Enter age..." id="Age1" style="width:200px" />
+        </div>
+        <label style="color:black">Gender: </label>
+        <div class="form-check-inline">
+            <label class="form-check-label" for="male" style="color:black">
+                <input type="radio" class="form-check-input" id="male" name="options" value="male" />Male
+            </label>
+        </div>
+
+        <div class="form-check-inline">
+
+            <label class="form-check-label" for="female" style="color:black">
+                <input type="radio" class="form-check-input" id="female" name="options" value="female" />Female
+            </label>
+        </div>
+
+        <div class="form-group " style="color:black;">
+            <label for="Height1">Height:</label>
+            <input type="number" min="1" max="300" class="form-control text-right" placeholder="cm" id="Height1" style="width:200px" required />
+        </div>
+
+        <div class="form-group " style="color:black;">
+            <label for="Weight1">Weight:</label>
+            <input type="number" min="1" max="300" class="form-control text-right" placeholder="kg" id="Weight1" style="width:200px" required />
+        </div>
+        <div class="form-group" style="color:black">
+            <label for="select">Please select your activity level</label>
+            <select class="form-control selectpicker" data-width="fit" id="select" style="max-width:90%;">
+                <option value="1">I am sedentary (little or no exercise)</option>
+                <option value="2">I am lightly active (light exercise or sports 1-3 days per week)</option>
+                <option value="3">I am moderately active (moderate exercise or sports 3-5 days per week)</option>
+                <option value="4">I am very active (hard exercise or sports 6-7 days per week)</option>
+                <option value="5">I am super active (very hard exercise or sports and a physical job)</option>
+            </select>
+        </div>
+
+
+        <button id="calculate1" class="btn bg-light" onclick="calories()">Calculate</button>
+
+        <div class="form-group" style="color:black">
+            <input type="text" class="form-control" id="output1" placeholder="Calories..." readonly/>
+        </div>
+
+        <div class="alert alert-danger alert-dismissible fade show" style="display:none" id="alert">
+            <strong>Invalid input! Plese fill all the fields.</strong>
+        </div>
+        
+        <table class="table-striped ">
+            <thead class="thead-light">
+                <tr>
+                    <th>Activity level</th>
+                    <th>Calories</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>I am sedentary (little or no exercise)</td>
+                    <td id="nr1">- calories per day</td>
+                </tr>
+                <tr>
+                    <td>I am lightly active (light exercise or sports 1-3 days per week)</td>
+                    <td id="nr2">- calories per day</td>
+                </tr>
+                <tr>
+                    <td>I am moderately active (moderate exercise or sports 3-5 days per week)</td>
+                    <td id="nr3">- calories per day</td>
+                </tr>
+                <tr>
+                    <td>I am very active (hard exercise or sports 6-7 days per week)</td>
+                    <td id="nr4">- calories per day</td>
+                </tr>
+                <tr>
+                    <td>I am super active (very hard exercise or sports and a physical job)</td>
+                    <td id="nr5">- calories per day</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+
+    <script>
+        function calories() {
+            var age = parseInt(document.getElementById("Age1").value, 10);
+            var height = document.getElementById("Height1").value;
+            var weight = document.getElementById("Weight1").value;
+            var activity = document.getElementById("select").value;
+            var bmr;
+            var calories;
+
+            if (age == null || age < 18 || parseInt(height) == null || parseInt(height) < 100 || parseInt(weight) == null || parseInt(weight) <20 || (document.getElementById("male").checked == false && document.getElementById("female").checked == false))
+            {
+                document.getElementById("alert").style.display = "block";
+                            document.getElementById("output1").value = "Invalid fields";
+            } else {
+                document.getElementById("alert").style.display = "none";
+            if (document.getElementById("male").checked == true)
+                bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5;
+            else if (document.getElementById("female").checked == true)
+                bmr = (10 * weight) + (6.25 * height) - (5 * age) - 161;
+
+            if (activity == "1")
+                calories = bmr * 1.2;
+            else if (activity == "2")
+                calories = bmr * 1.375;
+            else if (activity == "3")
+                calories = bmr * 1.55;
+            else if (activity == "4")
+                calories = bmr * 1.725;
+            else if (activity == "5")
+                calories = bmr * 1.9;
+
+
+            document.getElementById("output1").value = Math.round(calories).toFixed(0) + "kcal/day to maintain your weight";
+            document.getElementById("nr1").innerHTML = Math.round((bmr * 1.2)).toFixed(0) + " kcal/day";
+            document.getElementById("nr2").innerHTML = Math.round((bmr * 1.375)).toFixed(0) + " kcal/day";
+            document.getElementById("nr3").innerHTML = Math.round((bmr * 1.55)).toFixed(0) + " kcal/day";
+            document.getElementById("nr4").innerHTML = Math.round((bmr * 1.725)).toFixed(0) + " kcal/day";
+            document.getElementById("nr5").innerHTML = Math.round((bmr * 1.9)).toFixed(0) + " kcal/day";
+        }
+        }
+
+
+
+        function calcBMI() {
+            var age = parseInt(document.getElementById("Age").value, 10);
+            var height = document.getElementById("Height").value;
+            var weight = document.getElementById("Weight").value;
+            var bmi
+            bmi = Math.round(weight / (Math.pow((height / 100), 2))).toFixed(2);
+            if (age >= 18) {
+                if (bmi < 15) document.getElementById("output").value = "Your BMI is " + bmi + ". You are very severly underweight.";
+                else if (bmi >= 15 && bmi <= 16) document.getElementById("output").value = "Your BMI is " + bmi + ". You are severly underweight.";
+                else if (bmi > 16 && bmi <= 18.5) document.getElementById("output").value = "Your BMI is " + bmi + ". You are underweight.";
+                else if (bmi > 18.5 && bmi <= 25) document.getElementById("output").value = "Your BMI is " + bmi + ". You are normal.";
+                else if (bmi > 25 && bmi <= 30) document.getElementById("output").value = "Your BMI is " + bmi + ". You are overweight.";
+                else if (bmi > 30 && bmi <= 35) document.getElementById("output").value = "Your BMI is " + bmi + ". You are obese class I.";
+                else if (bmi > 35 && bmi <= 40) document.getElementById("output").value = "Your BMI is " + bmi + ". You are obese class II.";
+                else if (bmi > 40) document.getElementById("output").value = "Your BMI is " + bmi + ". You are obese class III.";
+            }
+            else if (age < 18) {
+                document.getElementById("output").value = "BMI can only be calculated for adults!"
+            }
+
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
+
